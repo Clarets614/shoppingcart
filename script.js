@@ -18,11 +18,17 @@ function AddToList(name, price){
     }
     shoppinglist.push(newitem)
 }
-
+function CheckOut(){
+    console.log(shoppinglist)
+    let total = 0;
+    shoppinglist.forEach(i => total += i.Price)
+    console.log(`Total: ${total}`);
+}
 
 
 console.log(products)
 
 function ShowList(){
+
     return shoppinglist.forEach((s) => console.log(s)) 
     };
